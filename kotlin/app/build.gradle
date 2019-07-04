@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'git-repo'
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -21,15 +20,17 @@ android {
     }
 }
 repositories {
-    github("ucreates", "android_plugin", "master", "repository/kotlin")
+    maven {
+        url 'https://github.com/ucreates/android_plugin/raw/master/repository/kotlin/'
+    }
 }
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation 'com.android.support:support-vector-drawable:27.1.1'
-    implementation 'com.android.support:support-media-compat:27.1.1'
-    implementation 'com.android.support:support-v4:27.1.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-vector-drawable:28.0.0'
+    implementation 'com.android.support:support-media-compat:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     implementation 'com.google.firebase:firebase-core:16.0.0'
     implementation 'com.google.firebase:firebase-messaging:17.1.0'

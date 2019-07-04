@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "xxxxx",
         "android_client_info": {
-          "package_name": "com.ucreates.unityplugin"
+          "package_name": "com.ucreates.client"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "xxxxx",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.ucreates.unityplugin",
+            "package_name": "com.ucreates.client",
             "certificate_hash": "xxxxx"
           }
         },
